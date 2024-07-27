@@ -9,6 +9,6 @@ class HomeController extends Controller
     function index()
     {
         $allCategories = ['Category 1', 'Category 2'];
-        return view('index', ['categories' => $allCategories]);
+        dd("Test HomeController Index Web Endpoint. This hasn't been implemented yet. - KP");
     }
 }
