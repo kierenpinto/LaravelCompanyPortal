@@ -11,4 +11,9 @@ class HomeController extends Controller
         $allCategories = ['Category 1', 'Category 2'];
         dd("Test HomeController Index Web Endpoint. This hasn't been implemented yet. - KP");
     }
+
+    function php_info()
+    {
+        phpinfo();
+    }
 }
