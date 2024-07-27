@@ -1,0 +1,17 @@
+@props(['disabled' => false, 'items' => array(), 'chosen' => null])
+<select {{ $disabled ? 'disabled' : '' }} 
+{!! $attributes->merge([
+'class' => 'border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-indigo-500 dark:focus:ring-indigo-600 rounded-md shadow-sm'
+]) 
+!!}>
+@foreach ($items as $option_val => $option_text)
+    <option value="{{$option_val}}"
+    @if ($option_val == $chosen)
+    selected
+    @endif
+    >
+    {{$option_text}}
+    </option>
+@endforeach
+
+</select>

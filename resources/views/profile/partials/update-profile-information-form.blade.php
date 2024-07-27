@@ -47,6 +47,17 @@
             @endif
         </div>
 
+        <div>
+            <x-input-label for="type" :value="__('User Type')" />
+            <x-dropdown-input id="type" name="type" type="text" 
+            class="mt-1 block w-full" 
+            :value="old('type', $user->type->name)" 
+            :chosen="old('type', $user->type->value)" 
+            :items="$validTypes" 
+            required autocomplete="username" />
+            <x-input-error class="mt-2" :messages="$errors->get('type')" />
+        </div>
+
         <div class="flex items-center gap-4">
             <x-primary-button>{{ __('Save') }}</x-primary-button>
 
